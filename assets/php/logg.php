@@ -22,7 +22,7 @@ session_start();
 // Configuración de la conexión a la base de datos
 $servername = "localhost"; // Cambia esto al nombre de tu servidor MySQL
 $username = "root"; // Cambia esto al nombre de usuario de tu base de datos MySQL
-$password = ""; // Cambia esto a la contraseña de tu base de datos MySQL
+$password = "1234"; // Cambia esto a la contraseña de tu base de datos MySQL
 $database = "proyecto"; // Cambia esto al nombre de tu base de datos MySQL
 
 // Crear conexión
