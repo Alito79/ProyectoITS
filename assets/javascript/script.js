@@ -1,12 +1,22 @@
-function toggleForm() {
-
-    //Esta funcion sea dos constantes para podes trabajar
-    //los elementos comodamente, y modifica cual panel debe
-    //ocultarse.
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-
-    loginForm.classList.toggle('hidden');
-    registerForm.classList.toggle('hidden');
+function openContainer() {
+    var container = document.getElementById("container");
+    container.style.display = "flex";
 }
 
+function closeContainer() {
+    var container = document.getElementById("container");
+    container.style.display = "none";
+}
+
+function openRegisterForm() {
+    var container = document.getElementById("register-container");
+    container.style.display = "flex";
+    closeContainer();
+}
+
+function openLoginForm() {
+    var container = document.getElementById("container");
+    container.style.display = "flex";
+    var registerForm = document.getElementById("register-container");
+    registerForm.style.display = "none";
+}

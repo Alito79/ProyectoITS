@@ -2,63 +2,93 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIO Parking</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>AIO PARKING</title>
 </head>
 
 <body>
-    <header>
-        <h1>AIO Parking</h1>
-        <h2>Su destino integral para el cuidado y mantenimiento de su vehículo</h2>
-        <a href="assets/pages/autenticacion.html">Iniciar sesión</a>
-    </header>
-    <section class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="service">
-            <i class='bx bxs-parking'></i>
-            <h3>Estacionamiento Seguro</h3>
-        </div>
-        <div class="service">
-            <i class='bx bxs-car-wash'></i>
-            <h3>Lavado & Detalle</h3>
-        </div>
-        <div class="service">
-            <i class='bx bxs-color'></i>
-            <h3>Venta de Neumáticos</h3>
-        </div>
-    </section>
+  <header>
+    <div class="PARKING">
+      <h1>AIO PARKING</h1>
+    </div>
+    <nav>
+      <ul class="headerlinks">
+        <li>Servicios</li>
+        <li>Precios</li>
+        <li>Contacto</li>
+      </ul>
+    </nav>
+    <a href="#" class="ingresar" onclick="openContainer()">Ingresar</a>
+  </header>
+  <main>
+    <section class="gallery">
 
-    <section class="service-details">
-        <h2>Detalle de Servicios</h2>
-        <p>En AIO Parking ofrecemos una amplia gama de servicios para su vehículo, todo en un solo lugar conveniente.
-            Conozca más a fondo cada uno de ellos:</p>
-        <ul>
-            <li>
-                <h4>Estacionamiento seguro:</h4>
-                <p>Ofrecemos plazas de estacionamiento seguras para autos, motos, camionetas y pequeños utilitarios,
-                    tanto por hora como por día, semana o mes. Además, contamos con vigilancia constante para garantizar
-                    la seguridad de su vehículo.</p>
-            </li>
-            <li>
-                <h4>Lavado y detalle:</h4>
-                <p>Brindamos servicios de lavado completos para todo tipo de vehículos, utilizando productos de alta
-                    calidad para dejar su auto reluciente. También ofrecemos servicios de detalle interior y exterior
-                    para una limpieza profunda.</p>
-            </li>
-            <li>
-                <h4>Venta de neumáticos:</h4>
-                <p>Somos representantes de las principales marcas de neumáticos del mercado. Ofrecemos precios
-                    competitivos y asesoramiento personalizado para ayudarlo a elegir los neumáticos adecuados para su
-                    vehículo.</p>
-            </li>
-        </ul>
     </section>
+    <section class="info">
+      <section class="contact">
+        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxs-envelope'></i></a>
+      </section>
+      <hr>
+      <section class="info-services">
+        <h2>Servicios</h2>
+        <p>AIO PARKING ofrece una amplia gama de servicios diseñados para satisfacer las necesidades de nuestros
+          clientes:</p>
+        <ul>
+          <li>Estacionamiento seguro para vehículos de diversos tamaños, incluyendo autos, camionetas, pequeños camiones
+            y motocicletas.</li>
+          <li>Servicio de lavadero de vehículos para mantener su automóvil limpio y reluciente.</li>
+          <li>Alineación y balanceo de ruedas para garantizar un viaje suave y seguro.</li>
+          <li>Venta de neumáticos de marcas reconocidas como Michelin, Bridgestone y Pirelli, con precios competitivos y
+            una amplia variedad de opciones.</li>
+        </ul>
+        <p>Nuestro objetivo es proporcionar un servicio integral que satisfaga todas las necesidades de mantenimiento y
+          cuidado de su vehículo, todo en un solo lugar.</p>
+      </section>
+    </section>
+  </main>
+
+  <!-- Ventana emergente -->
+  <div id="container" class="modal-container">
+    <div class="container-content">
+      <!-- Contenido ventana-->
+      <h2>Iniciar sesión</h2>
+      <form id="login-form">
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <!-- Boton para cambiar a formulario -->
+      <p>¿No tienes una cuenta? <a href="#" onclick="openRegisterForm()">Regístrate</a></p>
+      <span class="close-btn" onclick="closeContainer()">X</span>
+    </div>
+  </div>
+
+  <!-- Formulario de registro-->
+  <div id="register-container" class="modal-container" style="display: none;">
+    <div class="container-content">
+      <h2>Registrarse</h2>
+      <form id="register-form">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+      <!-- Boton para cambiar a formulario -->
+      <p>¿Ya tienes una cuenta? <a href="#" onclick="openLoginForm()">Iniciar sesión</a></p>
+      <span class="close-btn" onclick="closeContainer()">X</span>
+    </div>
+  </div>
+
+  <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>

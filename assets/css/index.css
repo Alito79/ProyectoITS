@@ -1,104 +1,181 @@
-/* Reset de estilos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
 }
 
-/* Estilos generales */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f0f6fc;
-    color: #333;
+  background-color: rgb(255, 255, 255);
 }
 
 header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #007bff;
-    color: #fff;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+  border: solid 1px;
 }
 
-header h1 {
-    font-size: 2.5em;
+.PARKING {
+  text-decoration: underline;
 }
 
-header h2 {
-    font-size: 1.2em;
-    margin-top: 10px;
+.PARKING:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #0056b3;
-    padding: 8px 16px;
-    border-radius: 5px;
+.headerlinks {
+  list-style: none;
 }
 
-a:hover {
-    background-color: #004080;
+.headerlinks li {
+  display: inline-block;
+  padding: 0 20px;
 }
 
-.services {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 800px;
+.headerlinks li,
+.ingresar {
+  background-color: rgb(24, 24, 24);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  text-decoration: none;
 }
 
-.services h2 {
-    margin-bottom: 20px;
+.headerlinks li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
-.service {
-    display: inline-block;
-    margin: 0 20px;
+.ingresar:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
-.service i {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #007bff;
+/* MAIN */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.service h3 {
-    font-size: 1.2em;
+main .gallery,
+.info {
+  margin: 5px;
+  border-radius: 5px;
 }
 
-.service-details {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.gallery {
+  height: 600px;
+  width: 900px;
+  border: solid;
 }
 
-.service-details h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.info {
+  height: 600px;
+  width: 500px;
+  border: solid;
 }
 
-.service-details p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
-.service-details ul {
-    list-style-type: none;
+.contact a {
+  text-decoration: none;
+  color: initial;
 }
 
-.service-details li {
-    margin-bottom: 30px;
+.info-services {
+  padding: 10px;
 }
 
-.service-details h4 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.info-services h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .service {
-        margin: 0 10px;
-    }
+.info-services p,
+li {
+  font-weight: bold;
+  font-size: 15.4px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* INGRESAR */
+
+/* Estilos para la ventana emergente */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente */
+  z-index: 9999;
+  /* Z-index alto para que esté por encima de todo */
+  justify-content: center;
+  align-items: center;
+}
+
+.container-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 350px;
+  height: 100%px;
+}
+
+.container-content h2,
+p {
+  text-align: center;
+}
+.container-content p{
+  margin-top: 10px;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Estilos para los input enfocados */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: #e0e0e0;
 }
